@@ -6,4 +6,7 @@ import MyFirstComponent from './firstcomponent';
 
 var location = document.getElementById('rootcomponent')
 
-ReactDOM.render(<MyFirstComponent></MyFirstComponent>  , location)
+ReactDOM.render(
+                <span>    
+                    <MyFirstComponent></MyFirstComponent>  
+                </span>, location)
