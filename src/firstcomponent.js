@@ -13,9 +13,17 @@ class MyFirstComponent extends React.Component{
     }
 
     render(){
+
+        let mystyle = {
+            color: 'goldenrod',
+            backgroundColor:'bisque',
+            borderBottom:'1px solid brown'
+
+        }
+
         return(
                 <div>
-                    <h1>
+                    <h1 style={mystyle}>
                         Comments: {this.score}
                     </h1>
                     <CommentComponent 

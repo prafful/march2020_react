@@ -15,6 +15,7 @@ class CommentAction extends React.Component {
         }
 
         this.increment = this.increment.bind(this)
+        this.decrement = this.decrement.bind(this)
 
     }
 
@@ -25,17 +26,22 @@ class CommentAction extends React.Component {
         //console.log(typeof(parseInt(this.state.slikes)));
         this.setState({slikes: this.state.slikes + 1})
      }
+
+     decrement = function(){
+         console.log("in decrement function!");
+         this.setState({sdislikes: this.state.sdislikes - 1 })
+     }
     
     render() { 
         return (
-            <div>
+            <div >
                 Likes: {this.state.slikes}
                 &nbsp;
                 Dislikes: {this.state.sdislikes}
                 &nbsp;
                 <button onClick={this.increment}> + </button>
                 &nbsp;
-                <button > - </button>
+                <button onClick={this.decrement}> - </button>
                
             </div>
           );
