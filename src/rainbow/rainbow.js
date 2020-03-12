@@ -3,6 +3,11 @@ import React from 'react';
 
 
 class Rainbow extends React.Component {
+
+    componentWillUnmount(){
+        console.log("MyLifeCycle is unmounting Rainbow!");
+        alert()
+    }
     
     render() { 
         let rainbowStyle ={

@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import MyFirstComponent from './firstcomponent';
 import Rainbow from './rainbow/rainbow';
+import HobbyComponent from './form/hobbyform';
+import MyLifeCycle from './lifecycle/lifecycle';
 
 
 
@@ -10,6 +12,7 @@ var location = document.getElementById('rootcomponent')
 ReactDOM.render(
                 <span>    
                     <MyFirstComponent></MyFirstComponent>  
+                    <HobbyComponent></HobbyComponent>
                 </span>, location)
 
 
@@ -24,3 +27,5 @@ ReactDOM.render(
                     <Rainbow color="violredet">W</Rainbow>
                 </div>            
                 , document.getElementById('rainbow'))                
+
+ReactDOM.render(<MyLifeCycle></MyLifeCycle>, document.getElementById('lifecycle'))                
