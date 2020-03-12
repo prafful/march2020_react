@@ -4,6 +4,7 @@ import MyFirstComponent from './firstcomponent';
 import Rainbow from './rainbow/rainbow';
 import HobbyComponent from './form/hobbyform';
 import MyLifeCycle from './lifecycle/lifecycle';
+import RemoteUsers from './remote/remoteusers';
 
 
 
@@ -28,4 +29,6 @@ ReactDOM.render(
                 </div>            
                 , document.getElementById('rainbow'))                
 
-ReactDOM.render(<MyLifeCycle></MyLifeCycle>, document.getElementById('lifecycle'))                
+ReactDOM.render(<MyLifeCycle></MyLifeCycle>, document.getElementById('lifecycle')) 
+
+ReactDOM.render(<RemoteUsers></RemoteUsers>, document.getElementById('remote'))
