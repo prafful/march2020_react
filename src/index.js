@@ -5,6 +5,7 @@ import Rainbow from './rainbow/rainbow';
 import HobbyComponent from './form/hobbyform';
 import MyLifeCycle from './lifecycle/lifecycle';
 import RemoteUsers from './remote/remoteusers';
+import Friends from './friends-rest/friends';
 
 
 
@@ -31,4 +32,10 @@ ReactDOM.render(
 
 ReactDOM.render(<MyLifeCycle></MyLifeCycle>, document.getElementById('lifecycle')) 
 
-ReactDOM.render(<RemoteUsers></RemoteUsers>, document.getElementById('remote'))
+ReactDOM.render(
+                <span>
+                <RemoteUsers></RemoteUsers>
+                <hr />
+                <Friends></Friends>
+                </span>,
+                document.getElementById('remote'))

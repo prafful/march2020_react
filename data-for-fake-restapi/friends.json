@@ -1,0 +1,85 @@
+{
+  "allfriends": [
+    {
+      "name": "OBBO",
+      "location": "Chennai",
+      "likes": 44,
+      "dislikes": 2,
+      "id": 1
+    },
+    {
+      "name": "Kicks",
+      "location": "Chepauk",
+      "likes": 44,
+      "dislikes": 13,
+      "id": 2
+    },
+    {
+      "name": "Takia",
+      "location": "Kalam-undra",
+      "likes": 44,
+      "dislikes": 20,
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    },
+    {
+      "id": 8
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 10
+    },
+    {
+      "name": "",
+      "location": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 11
+    },
+    {
+      "name": "",
+      "location": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 12
+    },
+    {
+      "name": "",
+      "location": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 13
+    },
+    {
+      "name": "",
+      "location": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 14
+    },
+    {
+      "name": "rwerew",
+      "location": "wrerwer",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 15
+    },
+    {
+      "name": "rwerwer",
+      "location": "55654453",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 16
+    }
+  ]
+}
