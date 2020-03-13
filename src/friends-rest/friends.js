@@ -67,13 +67,13 @@ class Friends extends React.Component {
     }
 
     getName = function(e){
-        e.preventDefault()
+        //e.preventDefault()
         this.setState({name: e.target.value})
         console.log(this.state.name);
     }
 
     getLocation = function(e){
-        e.preventDefault()
+        //e.preventDefault()
         this.setState({location: e.target.value})
         console.log(this.state.location);
     }
