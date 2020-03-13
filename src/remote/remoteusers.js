@@ -42,7 +42,8 @@ class RemoteUsers extends React.Component {
         return this.state.users.map(function(eachuser){
             return (
               <User key={eachuser.id}
-                    name={eachuser.name} 
+                    id={eachuser.id}
+                    myname={eachuser.name} 
                     username={eachuser.username}
                     email={eachuser.email}
                     latitude={eachuser.address.geo.lat}
@@ -58,7 +59,23 @@ class RemoteUsers extends React.Component {
         return ( 
             <div>
                 <h4>Get Remote Users</h4>
-                {this.displayUsers()}
+                <table border='1'>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Latitude</th>
+                        <th>Longitude</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     {this.displayUsers()}
+                </tbody>
+                    
+                </table>
+               
            
             </div>
          );

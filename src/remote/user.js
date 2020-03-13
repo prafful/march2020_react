@@ -4,19 +4,21 @@ class User extends React.Component {
     
     render() { 
         return ( 
-            <span>
-                User: {this.props.name}
-                <br />
-                Username: {this.props.username}
-                <br />
-                Email: {this.props.email}
-                <br />
-                Latitude: {this.props.latitude}
-                <br />                
-                Longitude: {this.props.longitude}
-                <br />
-                <br />
-            </span>
+            <tr>
+                <td>{this.props.id}</td>
+
+                <td>{this.props.myname}</td>  
+             
+                <td> {this.props.username}</td>  
+            
+                <td>{this.props.email}</td>  
+             
+                <td>  {this.props.latitude}</td> 
+                           
+                <td>{this.props.longitude}</td>   
+               
+          
+            </tr>
          );
     }
 }
