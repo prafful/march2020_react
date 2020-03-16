@@ -24,6 +24,8 @@ class Friends extends React.Component {
         this.getNameUpdate = this.getNameUpdate.bind(this)
         this.getLocationUpdate = this.getLocationUpdate.bind(this)
         this.updateFriend = this.updateFriend.bind(this)
+        this.updateLike = this.updateLike.bind(this)
+        this.updateDislike = this.updateDislike.bind(this)
     }
 
 
@@ -58,24 +60,83 @@ class Friends extends React.Component {
                 })
     }
 
+    getFriendWithId(id){
+        console.log("Get friend with ID: " + id);
+        axios.get('http://localhost:3000/allfriends/' + id)
+        .then(res =>{
+            console.log(res);
+            console.log(res.data);
+            this.setState({
+                updatename:res.data.name,
+                updatelocation:res.data.location,
+                updatelikes:res.data.likes,
+                updatedislikes:res.data.dislikes,
+                updateid:res.data.id
+            })
+            console.log("Received updated state: " + this.state.updatelikes);
+        }, err =>{
+            console.log(err);
+        })
+
+    }
+
     receiveIdAndEdit = function(receivedID){
         console.log("Edit with ID: " + receivedID );
         //get the friend detail for receivedId
-        axios.get('http://localhost:3000/allfriends/' + receivedID)
-                .then(res =>{
-                    console.log(res);
-                    console.log(res.data);
-                    this.setState({
-                        updatename:res.data.name,
-                        updatelocation:res.data.location,
-                        updatelikes:res.data.likes,
-                        updatedislikes:res.data.dislikes,
-                        updateid:res.data.id
-                    })
-                }, err =>{
-                    console.log(err);
-                })
+       this.getFriendWithId(receivedID)
 
+    }
+
+    updateLike = function(receivedID){
+        console.log("Change like in Friends for ID: " +  receivedID);
+        //retrieve the value of likes for ID
+        axios.get('http://localhost:3000/allfriends/'+ receivedID)
+            .then(res=>{
+                this.setState({
+                    updatelikes: res.data.likes + 1
+                })
+                console.log(this.state.updatelikes);
+                var updateLikeJson = {
+                    "likes": this.state.updatelikes
+                }
+                axios.patch('http://localhost:3000/allfriends/'+ receivedID, updateLikeJson)
+                        .then(res =>{
+                            console.log(res.data);
+                            this.getFriends()
+                        }, err=>{
+                            console.log(err);
+                        })
+
+            },  err=>{
+                console.log(err);
+            })
+        
+        
+    }
+
+    updateDislike = function(receivedID){
+        console.log("Change dislike in Friends for ID: " +  receivedID);
+         //retrieve the value of likes for ID
+         axios.get('http://localhost:3000/allfriends/'+ receivedID)
+         .then(res=>{
+             this.setState({
+                 updatedislikes: res.data.dislikes + 1
+             })
+             console.log(this.state.updatedislikes);
+             var updateDisLikeJson = {
+                 "dislikes": this.state.updatedislikes
+             }
+             axios.patch('http://localhost:3000/allfriends/'+ receivedID, updateDisLikeJson)
+                     .then(res =>{
+                         console.log(res.data);
+                         this.getFriends()
+                     }, err=>{
+                         console.log(err);
+                     })
+
+         },  err=>{
+             console.log(err);
+         })
     }
 
     displayFriends = function () {
@@ -89,6 +150,8 @@ class Friends extends React.Component {
                             dislike={friend.dislikes}
                             deleteWithId={this.receiveIdAndDelete}
                             editWithId={this.receiveIdAndEdit}
+                            changeLike ={this.updateLike}
+                            changeDislike={this.updateDislike}
                         ></Friend>
                     )
         })

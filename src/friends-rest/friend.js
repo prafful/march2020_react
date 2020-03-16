@@ -8,6 +8,8 @@ class Friend extends React.Component {
 
         this.deleteFriendWithId = this.deleteFriendWithId.bind(this)
         this.editFriendWithId = this.editFriendWithId.bind(this)
+        this.changeLike = this.changeLike.bind(this)
+        this.changeDislike = this.changeDislike.bind(this)
     }
 
     deleteFriendWithId = function(){
@@ -19,6 +21,17 @@ class Friend extends React.Component {
         console.log("Edit friend with ID: " + this.props.id);
         this.props.editWithId(this.props.id)
     }
+
+    changeLike = function(){
+        console.log("Change like for ID: " + this.props.id);
+        this.props.changeLike(this.props.id)
+    }
+
+    changeDislike = function(){
+        console.log("Change dislike for ID: " + this.props.id);
+        this.props.changeDislike(this.props.id)
+    }
+
     
     render() { 
         return ( 
@@ -35,10 +48,10 @@ class Friend extends React.Component {
                     <button onClick={this.deleteFriendWithId}>Delete</button>
                 </td>
                 <td>
-                    <button >+</button>
+                    <button onClick={this.changeLike}>+</button>
                 </td>
                 <td>
-                    <button >-</button>
+                    <button onClick={this.changeDislike}>-</button>
                 </td>
 
             </tr>

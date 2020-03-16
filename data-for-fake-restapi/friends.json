@@ -3,29 +3,29 @@
     {
       "name": "OBBO",
       "location": "Chennai",
-      "likes": 44,
-      "dislikes": 2,
+      "likes": 5,
+      "dislikes": 4,
       "id": 1
     },
     {
       "name": "Kicks",
       "location": "Chepauk",
-      "likes": 44,
+      "likes": 32,
       "dislikes": 13,
       "id": 2
     },
     {
       "name": "Takia",
       "location": "Kalam-undra",
-      "likes": 44,
-      "dislikes": 20,
+      "likes": 50,
+      "dislikes": 21,
       "id": 4
     },
     {
-      "name": "Mulam",
-      "location": "Hyderabad",
-      "likes": 0,
-      "dislikes": 0,
+      "name": "MulamSingh",
+      "location": "Punjab",
+      "likes": 7,
+      "dislikes": 3,
       "id": 5
     }
   ]
