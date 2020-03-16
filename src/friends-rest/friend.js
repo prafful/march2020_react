@@ -2,6 +2,17 @@ import React from 'react';
 
 
 class Friend extends React.Component {
+
+    constructor(props){
+        super(props)
+
+        this.deleteFriendWithId = this.deleteFriendWithId.bind(this)
+    }
+
+    deleteFriendWithId = function(){
+        console.log("Delete friend with ID: " + this.props.id);
+        this.props.deleteWithId(this.props.id)
+    }
     
     render() { 
         return ( 
@@ -15,7 +26,7 @@ class Friend extends React.Component {
                     <button >Edit</button>
                 </td>
                 <td>
-                    <button >Delete</button>
+                    <button onClick={this.deleteFriendWithId}>Delete</button>
                 </td>
                 <td>
                     <button >+</button>
